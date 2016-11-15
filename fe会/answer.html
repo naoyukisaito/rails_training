@@ -11,13 +11,13 @@
     <div class="row">
       <div class="form-group">
         <label for="account1">大科目を選択してください</label>
-        <select class="form-control jsc-account1" name="account1">
+        <select class="form-control jsc-select-box1">
         </select>
       </div>
 
       <div class="form-group">
         <label for="account2">小科目を選択してください</label>
-        <select class="form-control jsc-account2" name="account2">
+        <select class="form-control jsc-select-box2">
         </select>
       </div>
     </div>
@@ -29,14 +29,14 @@
   <script src="index.js"></script>
   <script>
 
-    var training = {
+    var EXERCISE = {
 
         init: function() {
             this.setParameters();
             this.bindEvent();
         },
         setParameters: function() {
-            this.$accout1 = [
+            this.$railways = [
                 "沿線を選択",
                 "東京メトロ丸ノ内線",
                 "東京メトロ銀座線",
@@ -45,7 +45,7 @@
                 "京王電鉄井の頭線",
                 "京王電鉄京王線"
             ];
-            this.$accout2 = [
+            this.$stations = [
                 ["駅を選択"],
                 ["池袋", "新大塚", "茗荷谷", "後楽園", "本郷三丁目", "御茶ノ水"],
                 ["浅草", "田原町", "稲荷町", "上野", "上野広小路"],
@@ -55,8 +55,8 @@
                 ["新宿", "初台", "幡ヶ谷", "笹塚", "代田橋"]
             ];
             this.$window = $(window);
-            this.$box1 = $('.jsc-account1');
-            this.$box2 = $('.jsc-account2');
+            this.$box1 = $('.jsc-select-box1');
+            this.$box2 = $('.jsc-select-box2');
             this.index = 0;
         },
         bindEvent: function() {
@@ -65,8 +65,8 @@
             this.$box1.on('change', $.proxy(this.setBox2, this));
         },
         setBox1: function() {
-            for (i = 0, l = this.$accout1.length; i < l; i++) {
-            var option1 = this.$accout1[i];
+            for (i = 0, l = this.$railways.length; i < l; i++) {
+            var option1 = this.$railways[i];
             this.$box1.append('<option value=' + this.index + '>' + option1 + '</value>');
             this.index += 1;
           }
@@ -74,14 +74,14 @@
         setBox2: function() {
             var index = this.$box1.val();
             this.$box2.empty();
-            var options = this.$accout2[index];
+            var options = this.$stations[index];
             for (var i = 0, l = options.length; i < l; i++) {
               var option = options[i];
               this.$box2.append('<option>' + option + '</option>');
             }
         }
     };
-    training.init();
+    EXERCISE.init();
   </script>
 </body>
 </html>
