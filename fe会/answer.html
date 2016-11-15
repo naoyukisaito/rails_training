@@ -60,7 +60,6 @@
             this.index = 0;
         },
         bindEvent: function() {
-            var _self = this;
             this.$window.on('load', $.proxy(this.setBox1, this));
             this.$box1.on('change', $.proxy(this.setBox2, this));
         },
@@ -81,7 +80,7 @@
             }
         }
     };
-    exercise.init();
+    EXERCISE.init();
   </script>
 </body>
 </html>
