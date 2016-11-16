@@ -127,16 +127,17 @@
 	};
 
 	var PAGINATION = function(target, control){
-		this.control = control;     //$問題''
+		this.control = control;
 		this.$target = $(target);
 		console.log(target);
 		console.log(this.$target);
-		this.init();    //thisの参照先
+		this.init();
 	};
 	PAGINATION.prototype = {
 
 		init: function () {
-			this.control.addObj(this);  //this
+			console.log(this);
+			this.control.addObj(this);
 			this.setParameters();
 			this.bindEvent();
 		},
