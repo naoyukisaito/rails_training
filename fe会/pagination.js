@@ -60,7 +60,6 @@ PAGINATION.prototype = {
 	toPrev: function() {
 		var $active = this.$target.find('.active');
 		this.$prev.addClass('disabled');
-
 		if ($active.index() === 1) {
 			return;
 		} else {
@@ -75,14 +74,12 @@ PAGINATION.prototype = {
 	toNext: function() {
 		var $active = this.$target.find('.active');
 		this.$next.addClass('disabled');
-
 		if ($active.index() === this.liMax) {
 			return;
 		} else {
 			$active.removeClass('active');
 			this.$target.find('li').eq($active.index() + 1).addClass('active');
 			this.$prev.removeClass('disabled');
-
 			if (($active.index() + 1) !== this.liMax) {
 				this.$next.removeClass('disabled');
 			}
