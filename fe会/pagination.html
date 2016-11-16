@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<title>Pagination</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style>
+		.pagination-container{
+			margin-top: 30px;
+			text-align: center;
+		}
+		.pagination{
+			display: inline-block;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.pagination:after{
+			display: block;
+			content: "";
+			clear:both;
+		}
+		.pagination > li{
+			float: left;
+			margin: 0;
+			padding: 0;
+		}
+		.pagination > li + li{
+			margin-left: 10px;
+		}
+		.pagination > li > a{
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px;
+			border: solid 1px transparent;
+			border-radius: 20%;
+			background-color: #E4E4E5;
+			color: #021E4A;
+
+		}
+		.pagination > li.active > a{
+			background-color: #009DDF;
+			color: #FFFFFF;
+			cursor: default;
+		}
+		.pagination > li.disabled > a{
+			background-color: #E4E4E5;
+			color: #FFFFFF;
+			cursor: default;
+		}
+	</style>
+</head>
+<body>
+<div class="pagination-container">
+	<ol class="jsc-pagination pagination">
+		<li class="jsc-previous disabled"><a href="#"><</a></li>
+		<li class="active"><a href="1">1</a></li>
+		<li><a href="2">2</a></li>
+		<li><a href="3">3</a></li>
+		<li><a href="4">4</a></li>
+		<li><a href="5">5</a></li>
+		<li><a href="6">6</a></li>
+		<li><a href="7">7</a></li>
+		<li><a href="8">8</a></li>
+		<li><a href="9">9</a></li>
+		<li><a href="10">10</a></li>
+		<li class="jsc-next"><a href="#">></a></li>
+	</ol>
+</div>
+<div class="pagination-container">
+	<ol class="jsc-pagination pagination">
+		<li class="jsc-previous disabled"><a href="#"><</a></li>
+		<li class="active"><a href="1">1</a></li>
+		<li><a href="2">2</a></li>
+		<li><a href="3">3</a></li>
+		<li><a href="4">4</a></li>
+		<li><a href="5">5</a></li>
+		<li><a href="6">6</a></li>
+		<li><a href="7">7</a></li>
+		<li><a href="8">8</a></li>
+		<li><a href="9">9</a></li>
+		<li><a href="10">10</a></li>
+		<li class="jsc-next"><a href="#">></a></li>
+	</ol>
+</div>
+<div class="pagination-container">
+	<ol class="jsc-pagination pagination">
+		<li class="jsc-previous disabled"><a href="#"><</a></li>
+		<li class="active"><a href="1">1</a></li>
+		<li><a href="2">2</a></li>
+		<li><a href="3">3</a></li>
+		<li><a href="4">4</a></li>
+		<li><a href="5">5</a></li>
+		<li class="jsc-next"><a href="#">></a></li>
+	</ol>
+</div>
+</body>
+<script>
+
+	var PAGINATION_MANAGER = {
+
+		init : function(){
+			this.setParameters();
+		},
+		setParameters : function(){
+			this.paginations = [];
+		},
+		addObj : function(objs){
+			this.paginations.push(objs);
+		},
+		setNext : function(){
+			for(var i = 0, l = this.paginations.length; i < l; i++){
+				this.paginations[i].toNext();
+			}
+		},
+		setPrev : function(){
+			for(var i = 0, l = this.paginations.length; i < l; i++){
+				this.paginations[i].toPrev();
+			}
+		},
+		setMove : function(thisIndex){
+			for(var i = 0, l = this.paginations.length; i < l; i++){
+				this.paginations[i].toMove(thisIndex);
+			}
+		}
+	};
+
+	var PAGINATION = function(target, control){
+		this.control = control;     //$問題''
+		this.$target = $(target);
+		console.log(target);
+		console.log(this.$target);
+		this.init();    //thisの参照先
+	};
+	PAGINATION.prototype = {
+
+		init: function () {
+			this.control.addObj(this);  //this
+			this.setParameters();
+			this.bindEvent();
+		},
+		setParameters: function () {
+			this.$prev = this.$target.find('.jsc-previous');
+			this.$next = this.$target.find('.jsc-next');
+			this.liMax = this.$target.find('li').not('.jsc-previous, .jsc-next').length;
+			this.liMin = 0;
+		},
+		bindEvent: function () {
+			this.$prev.on('click', $.proxy(this.control.setPrev, this.control));
+			this.$next.on('click', $.proxy(this.control.setNext, this.control));
+			var self = this;
+			this.$target.find('li').not('.jsc-previous, .jsc-next').on('click', function (event) {
+				event.preventDefault();
+				self.control.setMove($(this).index());
+			});
+		},
+		toPrev: function () {
+			var $active = this.$target.find('.active');
+			this.$prev.addClass('disabled');
+
+			if ($active.index() == 1) {
+				return;
+			} else {
+				$active.removeClass('active');
+				this.$target.find('li').eq($active.index() - 1).addClass('active');
+				this.$next.removeClass('disabled');
+				if (($active.index() - 1) != 1) {
+					this.$prev.removeClass('disabled');
+				}
+			}
+		},
+		toNext: function () {
+			var $active = this.$target.find('.active');
+			this.$next.addClass('disabled');
+
+			if ($active.index() == this.liMax) {
+				return;
+			} else {
+				$active.removeClass('active');
+				this.$target.find('li').eq($active.index() + 1).addClass('active');
+				this.$prev.removeClass('disabled');
+
+				if (($active.index() + 1) != this.liMax) {
+					this.$next.removeClass('disabled');
+				}
+			}
+		},
+		toMove: function (thisIndex) {
+			var $active = this.$target.find('.active');
+			$active.removeClass('active');
+			this.$prev.addClass('disabled');
+			this.$next.addClass('disabled');
+			this.$target.find('li').eq(thisIndex).addClass('active');
+
+			if(thisIndex >= this.liMax){
+				this.$target.find('li').eq(this.liMax).addClass('active');
+			}
+			if (thisIndex !== 1) {
+				this.$prev.removeClass('disabled');
+			}
+			if (thisIndex < this.liMax) {
+				this.$next.removeClass('disabled');
+			}
+		}
+	};
+
+	$(function(){
+		PAGINATION_MANAGER.init();
+		$('.jsc-pagination').each(function(){
+			new PAGINATION(this, PAGINATION_MANAGER);   //this & $問題
+			// console.log(this);
+			// console.log(PAGINATION_MANAGER);
+		});
+	})
+
+
+
+
+
+</script>
+</html>
