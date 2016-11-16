@@ -85,7 +85,7 @@ PAGINATION.prototype = {
 			}
 		}
 	},
-	toMove: function (thisIndex) {
+	toMove: function(thisIndex) {
 		var $active = this.$target.find('.active');
 		$active.removeClass('active');
 		this.$prev.addClass('disabled');
