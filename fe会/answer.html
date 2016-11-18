@@ -11,13 +11,13 @@
     <div class="row">
       <div class="form-group">
         <label for="account1">大科目を選択してください</label>
-        <select class="form-control jsc-select-box1">
+        <select class="form-control jsc-select-box-primary">
         </select>
       </div>
 
       <div class="form-group">
         <label for="account2">小科目を選択してください</label>
-        <select class="form-control jsc-select-box2">
+        <select class="form-control jsc-select-box-secondaly">
         </select>
       </div>
     </div>
@@ -26,7 +26,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script src="index.js"></script>
   <script>
 
     var EXERCISE = {
@@ -55,28 +54,37 @@
                 ["新宿", "初台", "幡ヶ谷", "笹塚", "代田橋"]
             ];
             this.$window = $(window);
-            this.$box1 = $('.jsc-select-box1');
-            this.$box2 = $('.jsc-select-box2');
+            this.$selectBoxPrimary = $('.jsc-select-box-primary');
+            this.$selectBoxSecondaly = $('.jsc-select-box-secondaly');
             this.index = 0;
         },
         bindEvent: function() {
-            this.$window.on('load', $.proxy(this.setBox1, this));
-            this.$box1.on('change', $.proxy(this.setBox2, this));
+            this.$window.on('load', $.proxy(this.setOptions, this));
+            this.$selectBoxPrimary.on('change', $.proxy(this.switchOptions, this));
         },
-        setBox1: function() {
+        setOptions: function() {
+            var option, i, l, optionHtml;
+
             for (i = 0, l = this.$railways.length; i < l; i++) {
-            var option1 = this.$railways[i];
-            this.$box1.append('<option value=' + this.index + '>' + option1 + '</value>');
-            this.index += 1;
-          }
+                option = this.$railways[i];
+                optionHtml = '<option value=' + i + '>' + option + '</value>';
+                this.$selectBoxPrimary.append(optionHtml);
+                // this.index += 1;
+              }
         },
-        setBox2: function() {
-            var index = this.$box1.val();
-            this.$box2.empty();
-            var options = this.$stations[index];
-            for (var i = 0, l = options.length; i < l; i++) {
-              var option = options[i];
-              this.$box2.append('<option>' + option + '</option>');
+        switchOptions: function() {
+            var thisIndex = this.$selectBoxPrimary.find('option:selected').index(),
+                options = this.$stations[thisIndex],
+                option,
+                optionHtml,
+                i,
+                l;
+
+            this.$selectBoxSecondaly.empty();
+            for (i = 0, l = options.length; i < l; i++) {
+              option = options[i];
+              optionHtml = '<option>' + option + '</option>'
+              this.$selectBoxSecondaly.append(optionHtml);
             }
         }
     };
