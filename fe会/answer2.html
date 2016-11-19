@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>javascript lesson</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container" style="width: 200px; margin-top: 200px">
+    <div class="row">
+      <div class="form-group">
+        <label for="account1">大科目を選択してください</label>
+        <select class="form-control jsc-select-box-primary jsc-select-box">
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="account2">小科目を選択してください</label>
+        <select class="form-control jsc-select-box-secondaly jsc-select-box">
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script>
+
+    var EXERCISE = {
+
+        init: function() {
+            this.setParameters();
+            this.bindEvent();
+        },
+        setParameters: function() {
+            this.$railways = [
+                "沿線を選択",
+                "東京メトロ丸ノ内線",
+                "東京メトロ銀座線",
+                "JR山手線",
+                "JR中央線",
+                "京王電鉄井の頭線",
+                "京王電鉄京王線"
+            ];
+            this.$stations = [
+                ["駅を選択"],
+                ["池袋", "新大塚", "茗荷谷", "後楽園", "本郷三丁目", "御茶ノ水"],
+                ["浅草", "田原町", "稲荷町", "上野", "上野広小路"],
+                ["品川", "大崎", "五反田", "目黒", "恵比寿", "渋谷"],
+                ["東京", "神田", "御茶ノ水", "四谷", "新宿"],
+                ["渋谷", "神泉", "駒場東大前", "池の上", "下北沢"],
+                ["新宿", "初台", "幡ヶ谷", "笹塚", "代田橋"]
+            ];
+            this.$window = $(window);
+            this.$selectBoxPrimary = $('.jsc-select-box-primary');
+            this.$selectBoxSecondaly = $('.jsc-select-box-secondaly');
+        },
+        bindEvent: function() {
+            this.$window.on('load', $.proxy(this.setInitialOptions, this));
+            this.$selectBoxPrimary.on('change', $.proxy(this.changeOptions, this));
+        },
+        setInitialOptions: function() {
+            this.addOptions(this.$selectBoxPrimary, this.$railways);
+        },
+        changeOptions: function() {
+            var thisIndex = this.$selectBoxPrimary.find('option:selected').index(),
+                thisOptionsArr = this.$stations[thisIndex];
+
+            this.$selectBoxSecondaly.empty();
+            this.addOptions(this.$selectBoxSecondaly, thisOptionsArr);
+        },
+        addOptions: function(target, arr) {
+            var $target = $(target),
+                optionsArr = arr,
+                i, l, option, optionHtml;
+
+            for (i = 0, l = optionsArr.length; i < l; i++) {
+              option = optionsArr[i];
+              optionHtml = '<option>' + option + '</option>'
+              $target.append(optionHtml);
+            }
+        }
+    };
+    EXERCISE.init();
+  </script>
+</body>
+</html>
