@@ -63,6 +63,7 @@
             this.addOptions(this.$selectBoxPrimary, this.$railways);
         },
         changeOptions: function() {
+            // console.log($(this).find('option').index());
             var thisIndex = this.$selectBoxPrimary.find('option:selected').index(),
                 thisOptionsArr = this.$stations[thisIndex];
 
