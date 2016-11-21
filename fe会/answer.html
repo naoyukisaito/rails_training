@@ -59,10 +59,10 @@
             this.index = 0;
         },
         bindEvent: function() {
-            this.$window.on('load', $.proxy(this.setOptions, this));
-            this.$selectBoxPrimary.on('change', $.proxy(this.switchOptions, this));
+            this.$window.on('load', $.proxy(this.setInitialOptions, this));
+            this.$selectBoxPrimary.on('change', $.proxy(this.changeOptions, this));
         },
-        setOptions: function() {
+        setInitialOptions: function() {
             var option, i, l, optionHtml;
 
             for (i = 0, l = this.$railways.length; i < l; i++) {
@@ -72,7 +72,7 @@
                 // this.index += 1;
               }
         },
-        switchOptions: function() {
+        changeOptions: function() {
             var thisIndex = this.$selectBoxPrimary.find('option:selected').index(),
                 options = this.$stations[thisIndex],
                 option,
