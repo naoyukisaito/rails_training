@@ -54,26 +54,34 @@
                 ["新宿", "初台", "幡ヶ谷", "笹塚", "代田橋"]
             ];
             this.$window = $(window);
-            this.$selectBoxPrimary = $('.jsc-select-box-primary');
+            this.$selectBoxPrimary = $('.jsc-select-box-primary'); //汎用性のあるネーミングで！！
             this.$selectBoxSecondaly = $('.jsc-select-box-secondaly');
-            // this.index = 0;
         },
         bindEvent: function() {
+            // proxyを使った書き方も覚えましょう
             this.$window.on('load', $.proxy(this.setInitialOptions, this));
             this.$selectBoxPrimary.on('change', $.proxy(this.changeOptions, this));
+
+            // ↓ の書き方でも良いがproxyを使った書き方を推奨します。
+            // var _self = this;
+            // this.$window.on('load', function() {
+            //     _self.setInitialOptions();
+            // });
+            // this.$selectBoxPrimary.on('change', function() {
+            //     _self.changeOptions();
+            // });
         },
         setInitialOptions: function() {
-            var option, i, l, optionHtml;
+            var option, i, l, optionHtml; // var の定義はスコープ内の最初にまとめて定義する。（値のないものも含む）
 
             for (i = 0, l = this.$railways.length; i < l; i++) {
                 option = this.$railways[i];
-                optionHtml = '<option>' + option + '</value>';
-                // optionHtml = '<option value=' + i + '>' + option + '</value>';
+                optionHtml = '<option>' + option + '</option>';
                 this.$selectBoxPrimary.append(optionHtml);
-                // this.index += 1;
               }
         },
         changeOptions: function() {
+            // varの定義はカンマで区切ってつなげて書く。値があるものは最初に書き、値がないものはあとに書く。
             var thisIndex = this.$selectBoxPrimary.find('option:selected').index(),
                 options = this.$stations[thisIndex],
                 option,
