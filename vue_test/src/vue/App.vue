@@ -1,11 +1,13 @@
 <template>
   <div id="wrapper">
     <!-- header -->
+    <headerrr></headerrr>
     <div id="header">
       <a id="yc" href="">
       </a>
       <h1><a href="#/">vue.js test</a></h1>
       <span class="source">
+          {{msg}}
         <a :href="'#/page1/'">Page1</a> |
         <a :href="'#/page2/'">Page2</a>
       </span>
@@ -90,3 +92,26 @@ a
   #wrapper
     width 100%
 </style>
+<script>
+import Headerrr from './globals/Header.vue'
+
+    module.exports = {
+
+        components: {
+            Headerrr
+        },
+        data: function() {
+            return {
+                msg: 'ok'
+            }
+        },
+        ready: function() {
+            this.test();
+        },
+        methods: {
+            test: function() {
+                console.log($('.source'))
+            }
+        }
+    }
+</script>
