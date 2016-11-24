@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 // import { domain, fromNow } from './filters'
 import App from '../vue/App.vue';
+import Home from '../vue/pages/index.vue';
 import Page1 from '../vue/pages/page1.vue';
 import Page2 from '../vue/pages/page2.vue';
 // import ItemView from './components/ItemView.vue'
@@ -18,6 +19,9 @@ Vue.use(Router);
 var router = new Router();
 //
 router.map({
+    '/': {
+      component: Home
+    },
   '/page1': {
     component: Page1
   },
