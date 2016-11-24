@@ -56,7 +56,7 @@
             this.$window = $(window);
             this.$selectBoxPrimary = $('.jsc-select-box-primary');
             this.$selectBoxSecondaly = $('.jsc-select-box-secondaly');
-            this.index = 0;
+            // this.index = 0;
         },
         bindEvent: function() {
             this.$window.on('load', $.proxy(this.setInitialOptions, this));
@@ -67,7 +67,8 @@
 
             for (i = 0, l = this.$railways.length; i < l; i++) {
                 option = this.$railways[i];
-                optionHtml = '<option value=' + i + '>' + option + '</value>';
+                optionHtml = '<option>' + option + '</value>';
+                // optionHtml = '<option value=' + i + '>' + option + '</value>';
                 this.$selectBoxPrimary.append(optionHtml);
                 // this.index += 1;
               }
