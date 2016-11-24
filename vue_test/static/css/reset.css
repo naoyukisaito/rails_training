@@ -53,15 +53,14 @@ footer, header, nav, section, details, summary {
 /*-------------------------------------------------------------------------------
  BASE STYLE
  -------------------------------------------------------------------------------*/
-
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 /* font-family */
 html, input, select, textarea, table, th, td, li ,a {
-	font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'メイリオ', 'Meiryo', sans-serif;
-}
+	font-family: Lato, "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 /* font-style */
 html {
 	line-height: 1.5;
-	font-size: 16px;
+	font-size: 62.5%;
 	-webkit-text-size-adjust: 100%;
 	border-color: #464646;
 }

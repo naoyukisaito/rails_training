@@ -38,7 +38,7 @@
     position: relative;
 }
     .view {
-        margin-top: 10px;
+        // margin-top: 10px;
     }
 
 //   h1
