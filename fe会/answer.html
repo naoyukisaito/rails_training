@@ -61,6 +61,14 @@
         bindEvent: function() {
             this.$window.on('load', $.proxy(this.setInitialOptions, this));
             this.$selectBoxPrimary.on('change', $.proxy(this.changeOptions, this));
+
+            // var _self = this;
+            // this.$window.on('load', function() {
+            //     _self.setInitialOptions();
+            // });
+            // this.$selectBoxPrimary.on('change', function() {
+            //     _self.changeOptions();
+            // });
         },
         setInitialOptions: function() {
             var option, i, l, optionHtml;
@@ -82,6 +90,7 @@
                 l;
 
             this.$selectBoxSecondaly.empty();
+
             for (i = 0, l = options.length; i < l; i++) {
               option = options[i];
               optionHtml = '<option>' + option + '</option>'
