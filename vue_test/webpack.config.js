@@ -1,4 +1,4 @@
-var webpack = require('webpack')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/js/main.js',
@@ -14,20 +14,27 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue'
-      },
-      {
+      }, {
         test: /\.js$/,
         // excluding some local linked packages.
         // for normal use cases only node_modules is needed.
         exclude: /node_modules/,
         loader: 'babel'
+      }, {
+        test: /\.css$/,
+        loader: 'style!css',
       }
     ]
   },
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+    })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {

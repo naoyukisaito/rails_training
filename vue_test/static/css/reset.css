@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* margin padding reset */
+body, div, p,  ul, ol, li, dl, dt, dd, table, th ,td, img, figure,
+h1, h2, h3 ,h4 ,h5, h6, form, select {
+	margin: 0;
+	padding: 0;
+}
+
+/* remove list point mark */
+ul,
+ol		{ list-style: none; }
+
+/* remove border & off descender */
+img		{ border: 0; vertical-align: middle; }
+
+/* remove descender */
+svg,
+input,
+select,
+textarea,
+label	{ vertical-align: middle; }
+
+/* set collapse */
+table	{ border-collapse: collapse; }
+
+/* off bold */
+h1, h2, h3 ,h4 ,h5, h6, th, em, strong { font-weight: normal; }
+
+/*
+   break word for all elements
+   change box-model
+ */
+*,
+*:before,
+*:after {
+	word-break: break-all;
+	box-sizing: border-box;
+}
+pre	 {
+	white-space: pre-wrap;
+}
+
+/* [IE8-] New Tag from HTML5 */
+main, article, aside, figcaption, figure,
+footer, header, nav, section, details, summary {
+	display: block;
+}
+
+
+@charset "utf-8";
+
+/*-------------------------------------------------------------------------------
+ BASE STYLE
+ -------------------------------------------------------------------------------*/
+
+/* font-family */
+html, input, select, textarea, table, th, td, li ,a {
+	font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+/* font-style */
+html {
+	line-height: 1.5;
+	font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+	border-color: #464646;
+}
+/* base font color */
+html, input, select, textarea {
+	color: #464646;
+}
+/* normalize size */
+input, select, textarea {
+	font-size: 100%;
+}
+/* normalize style & weight */
+strong, em, small {
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*-------------------------------------------------------------------------------
+ ANCHORS STYLE
+ -------------------------------------------------------------------------------*/
+
+a:link		{ color: #20486a; }
+a:visited	{ color: #20486a; }
+a:hover		{ color: #2f6a9d; text-decoration: none; }
+a:active	{ color: #2f6a9d; text-decoration: none; }

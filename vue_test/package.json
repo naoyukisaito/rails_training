@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "HN clone with Vue.js using HN API",
   "scripts": {
-    "server": "webpack-dev-server --inline --hot --no-info",
+    "start": "webpack-dev-server --inline --hot --no-info",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "repository": {
@@ -24,16 +24,20 @@
     "babel-runtime": "^6.0.0",
     "cross-env": "^2.0.1",
     "css-loader": "^0.24.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^2.1.1",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "jquery": "^3.1.1",
+    "node-sass": "^3.13.0",
+    "sass": "^0.5.0",
+    "sass-loader": "^4.0.2",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.0.0",
     "vue-style-loader": "^1.0.0",
-    "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
   "dependencies": {
+    "webpack": "^1.12.2",
     "es6-promise": "^3.0.2",
     "firebase": "^3.4.1",
     "vue": "^1.0.26",
