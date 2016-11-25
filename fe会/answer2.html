@@ -72,13 +72,15 @@
         addOptions: function(target, arr) {
             var $target = $(target),
                 optionsArr = arr,
-                i, l, option, optionHtml;
+                l = optionsArr.length,
+                i, option, optionHtml;
 
-            for (i = 0, l = optionsArr.length; i < l; i++) {
+            for (i = 0; i < l ; i++) {
                 option = optionsArr[i];
-                optionHtml = '<option>' + option + '</option>'
-                $target.append(optionHtml);
+                optionHtml += '<option>' + option + '</option>'
+
             }
+            $target.append(optionHtml);
         }
     };
     EXERCISE.init();
