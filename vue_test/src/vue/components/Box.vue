@@ -1,6 +1,6 @@
 <template>
-    <div class="box {{item.color}}" v-for="item in colors">
-        <a href="">{{ item.color }}</a>
+    <div class="box"  v-for="item in colors">
+        <a :href="'#/page1/' + item.color" class="{{item.color}}">{{ item.color }}</a>
     </div>
 </template>
 
@@ -14,7 +14,7 @@
                     {color: 'red'},
                     {color: 'blue'},
                     {color: 'green'},
-                    {color: 'orange'}
+                    {color: 'yellow'}
                 ]
             }
         }
@@ -31,6 +31,11 @@
 
         a {
             display: block;
+            transition: all .3s;
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
     .red {
@@ -42,7 +47,7 @@
     .green {
     background-color: lightgreen;
     }
-    .orange {
-    background-color: orange;
+    .yellow {
+    background-color: gold;
     }
 </style>

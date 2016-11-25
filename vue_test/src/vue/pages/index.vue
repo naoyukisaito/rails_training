@@ -14,6 +14,7 @@
 		components: {
 			box
 		}
+
 	}
 
 </script>
