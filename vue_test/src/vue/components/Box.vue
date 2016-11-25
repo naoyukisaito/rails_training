@@ -1,6 +1,6 @@
 <template>
-    <div class="box">
-        <a href="" class="{{item.color}}">{{ item.color }}</a>
+    <div class="box"  v-for="item in colors">
+        <a :href="'#/page1/' + item.color" class="{{item.color}}">{{ item.color }}</a>
     </div>
 </template>
 
