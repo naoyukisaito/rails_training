@@ -1,6 +1,6 @@
 <template lang="html">
 	<div class="content">
-		<box></box>
+		<box v-for="item in colors"></box>
 	</div>
 </template>
 
@@ -13,7 +13,17 @@
 		name: 'Home',
 		components: {
 			box
-		}
+		},
+		data: function() {
+            return {
+                colors: [
+                    {color: 'red'},
+                    {color: 'blue'},
+                    {color: 'green'},
+                    {color: 'yellow'}
+                ]
+            }
+        }
 	}
 
 </script>
