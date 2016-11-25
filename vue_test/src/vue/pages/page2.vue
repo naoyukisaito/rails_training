@@ -22,11 +22,6 @@ export default {
 .news-view
   padding-left 5px
   padding-right 15px
-  &.loading:before
-    content "Loading..."
-    position absolute
-    top 16px
-    left 20px
   .nav
     padding 10px 10px 10px 40px
     margin-top 10px

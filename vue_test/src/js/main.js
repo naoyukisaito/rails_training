@@ -22,7 +22,7 @@ router.map({
     '/': {
       component: Home
     },
-  '/page1': {
+  '/page1/:color': {
     component: Page1
   },
   '/page2': {
