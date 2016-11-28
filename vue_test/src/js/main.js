@@ -16,12 +16,12 @@ Vue.use(Router);
 // Vue.filter('domain', domain)
 
 // routing
-var router = new Router();
+const router = new Router();
 //
 router.map({
-    '/': {
-      component: Home
-    },
+  '/': {
+    component: Home
+  },
   '/page1/:color': {
     component: Page1
   },
@@ -31,17 +31,17 @@ router.map({
   // '/item/:id': {
   //   component: ItemView
   // }
-})
-//
-// router.beforeEach(function () {
-//   window.scrollTo(0, 0)
-// })
+});
+  //
+  // router.beforeEach(function () {
+  //   window.scrollTo(0, 0)
+  // })
 
 // router.redirect({
 //   '*': '/news/1'
 // })
 
-router.start(App, '#app')
+router.start(App, '#app');
 
 // let test =>() {
 //     console.log('ok');
