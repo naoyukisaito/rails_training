@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>12/8</title>
+</head>
+<body>
+training
+
+
+
+<script>
+    // var  num = 0;
+    //
+    // switch (num) {
+    //   case 200:
+    //     console.log('ok');
+    //   case 404:
+    //     console.log('not found');
+    //     break;
+    //   case 500:
+    //     console.log('error');
+    //     break;
+    //   default:
+    //     console.log('不正な値です');
+    //     break;
+    // }
+
+    var data = 1;
+
+    switch (typeof data) {
+      case 'string':
+        console.log('文字列');
+        break
+        case 'number':
+          console.log('数値');
+          break
+          case 'string':
+            console.log('文字列');
+            break
+            case 'string':
+              console.log('文字列');
+              break
+    }
+
+
+    
+    var checkStatusCode = function(num) {
+        switch (num) {
+          case 200:
+            return 'ok';
+          case 404:
+            return 'not found';
+          case 500:
+            return 'error';
+          default:
+            return '不正な値です';
+        }
+    };
+
+    var result1 = checkStatusCode(200);
+    console.log(result1); // OK
+
+    var result2 = checkStatusCode(404);
+    console.log(result2); // not found
+
+    var result3 = checkStatusCode(500);
+    console.log(result3) // error
+
+    var result4 = checkStatusCode(10);
+    console.log(result4); // 不正な値です
+
+</script>
+</body>
+</html>
