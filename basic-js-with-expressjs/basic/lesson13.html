@@ -1,0 +1,591 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Lesson 13 : 応用編 ループと配列 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lesson14.html" />
+    
+    
+    <link rel="prev" href="lesson12.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a target="_self" href="../index.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    JavaScript基礎
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="lesson01.html">
+            
+                <a target="_self" href="lesson01.html">
+            
+                    
+                    Lesson 01 : 出力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="lesson02.html">
+            
+                <a target="_self" href="lesson02.html">
+            
+                    
+                    Lesson 02 : 計算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="lesson03.html">
+            
+                <a target="_self" href="lesson03.html">
+            
+                    
+                    Lesson 03 : Boolean(bool型)とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="lesson04.html">
+            
+                <a target="_self" href="lesson04.html">
+            
+                    
+                    Lesson 04 : 条件分岐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="lesson05.html">
+            
+                <a target="_self" href="lesson05.html">
+            
+                    
+                    Lesson 05 : 変数とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="lesson06.html">
+            
+                <a target="_self" href="lesson06.html">
+            
+                    
+                    Lesson 06 : 練習問題 条件分岐と変数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="lesson07.html">
+            
+                <a target="_self" href="lesson07.html">
+            
+                    
+                    Lesson 07 : 関数とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="lesson08.html">
+            
+                <a target="_self" href="lesson08.html">
+            
+                    
+                    Lesson 08 : ループ処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="lesson09.html">
+            
+                <a target="_self" href="lesson09.html">
+            
+                    
+                    Lesson 09 : 配列とループ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="lesson10.html">
+            
+                <a target="_self" href="lesson10.html">
+            
+                    
+                    Lesson 10 : Object（オブジェクト）で表現の幅を広げる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="lesson11.html">
+            
+                <a target="_self" href="lesson11.html">
+            
+                    
+                    Lesson 11 : JavaScript国のルール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="lesson12.html">
+            
+                <a target="_self" href="lesson12.html">
+            
+                    
+                    Lesson 12 : Object中心に...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="lesson13.html">
+            
+                <a target="_self" href="lesson13.html">
+            
+                    
+                    Lesson 13 : 応用編 ループと配列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="lesson14.html">
+            
+                <a target="_self" href="lesson14.html">
+            
+                    
+                    Lesson 14 : 体験編 HTML + JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    Node.js / Expressjs
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../nodejs-expess/l01-about-nodejs.html">
+            
+                <a target="_self" href="../nodejs-expess/l01-about-nodejs.html">
+            
+                    
+                    Lesson 01 : Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../nodejs-expess/l02-about-npm.html">
+            
+                <a target="_self" href="../nodejs-expess/l02-about-npm.html">
+            
+                    
+                    Lesson 02 : NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../nodejs-expess/l03-set-up.html">
+            
+                <a target="_self" href="../nodejs-expess/l03-set-up.html">
+            
+                    
+                    Lesson 03 : アプリケーション構築開始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../nodejs-expess/l04-explain-basic-express.html">
+            
+                <a target="_self" href="../nodejs-expess/l04-explain-basic-express.html">
+            
+                    
+                    Lesson 04 : Express基本解説
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../nodejs-expess/l05-get-request.html">
+            
+                <a target="_self" href="../nodejs-expess/l05-get-request.html">
+            
+                    
+                    Lesson 05 : GET リクエスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../nodejs-expess/l06-rendering.html">
+            
+                <a target="_self" href="../nodejs-expess/l06-rendering.html">
+            
+                    
+                    Lesson 06 : レンダリングエンジンpug(jade)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../nodejs-expess/l07-static-file.html">
+            
+                <a target="_self" href="../nodejs-expess/l07-static-file.html">
+            
+                    
+                    Lesson 07 : 静的ファイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../nodejs-expess/l08-post-request.html">
+            
+                <a target="_self" href="../nodejs-expess/l08-post-request.html">
+            
+                    
+                    Lesson 08 : POST リクエスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../nodejs-expess/l09-routing.html">
+            
+                <a target="_self" href="../nodejs-expess/l09-routing.html">
+            
+                    
+                    Lesson 09 : ルーティング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../nodejs-expess/mini-application.html">
+            
+                <a target="_self" href="../nodejs-expess/mini-application.html">
+            
+                    
+                    Last Lesson : ミニアプリケーション
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a target="_self" href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a target="_self" href=".." >Lesson 13 : 応用編 ループと配列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="lesson-13--&#x5FDC;&#x7528;&#x7DE8;-&#x30EB;&#x30FC;&#x30D7;&#x3068;&#x914D;&#x5217;">Lesson 13 : &#x5FDC;&#x7528;&#x7DE8; &#x30EB;&#x30FC;&#x30D7;&#x3068;&#x914D;&#x5217;</h2><p>if&#x6587;, for&#x6587;&#x306A;&#x3069;&#x306F;&#x5165;&#x308C;&#x5B50;&#x3067;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x51FA;&#x6765;&#x307E;&#x3059;&#x3002;</p><p>&#x5165;&#x308C;&#x5B50;&#x3068;&#x306F;&#x3001;if&#x6587;&#x306E;&#x306A;&#x304B;&#x306B;if&#x6587;&#x3092;&#x66F8;&#x3044;&#x305F;&#x308A;&#x3001;for&#x6587;&#x306E;&#x306A;&#x304B;&#x306B;for&#x6587;&#x3092;&#x66F8;&#x3044;&#x305F;&#x308A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p><p>&#x914D;&#x5217;&#x3084;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3082;&#x5165;&#x308C;&#x5B50;&#x3067;&#x66F8;&#x3051;&#x307E;&#x3059;&#x3002;</p><p>&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;for&#x6587;&#x306E;&#x5165;&#x308C;&#x5B50;&#x3092;&#x4F53;&#x9A13;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p><p>&#x4E5D;&#x4E5D;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;</p><p>Array, Object&#x306A;&#x3069;&#x306B;&#x306F;&#x4E88;&#x3081;&#x3001;&#x4FBF;&#x5229;&#x306A;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p><p>(&#x77E5;&#x3089;&#x306A;&#x3044;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3084;&#x8A18;&#x8FF0;&#x3092;&#x898B;&#x304B;&#x3051;&#x305F;&#x3089;&#x805E;&#x3044;&#x305F;&#x308A;&#x8ABF;&#x3079;&#x305F;&#x308A;&#x3059;&#x308B;&#x304F;&#x305B;&#x3092;&#x3064;&#x3051;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p><p>&#x8FF7;&#x60D1;&#x3092;&#x639B;&#x3051;&#x305F;&#x304F;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x601D;&#x3044;&#x3067;&#x3001;&#x8ABF;&#x3079;&#x308B;&#x3053;&#x3068;&#x306B;&#x91CD;&#x304D;&#x3092;&#x7F6E;&#x304F;&#x3053;&#x3068;&#x3082;&#x60AA;&#x304F;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x77E5;&#x3063;&#x3066;&#x3044;&#x308B;&#x4EBA;&#x306B;&#x805E;&#x304F;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x304C;&#x4E00;&#x756A;&#x306E;&#x8FD1;&#x9053;&#x3067;&#x3059;&#x3002;</p><p>&#x3082;&#x3061;&#x308D;&#x3093;&#x624B;&#x3092;&#x52D5;&#x304B;&#x3057;&#x3066;&#x81EA;&#x5206;&#x306E;&#x3082;&#x306E;&#x306B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;)</p><pre><code>for(var i = 1; i &lt;= 9; i++) {
+  var line = i + &apos;&#x306E;&#x6BB5; : &apos;;
+  var save = [];
+  for(var j = 1; j &lt;= 9; j++) {
+    save.push(i * j);// Array&#x306E;&#x6301;&#x3064;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3002;&#x914D;&#x5217;&#x306E;&#x672B;&#x5C3E;&#x306B;&#x5024;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;
+  }
+  console.log( line + save.join(&apos;, &apos;));// &#x6307;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3067;&#x914D;&#x5217;&#x306E;&#x8981;&#x7D20;&#x3092;&#x9023;&#x7D50;&#x3057;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8FD4;&#x3057;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;
+}</code></pre>
+<h3 id="&#x7DF4;&#x7FD2;&#x554F;&#x984C;">&#x7DF4;&#x7FD2;&#x554F;&#x984C;</h3><pre><code>// for&#x6587;&#x3092;&#x99C6;&#x4F7F;&#x3057;&#x3066;&#x3001;&#x30D0;&#x30C4;&#x5370;&#x3092;&#x63CF;&#x3044;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;
+</code></pre>
+<h3 id="&#x89E3;&#x7B54;&#x4F8B;">&#x89E3;&#x7B54;&#x4F8B;</h3><p>&#x203B;&#x4EE5;&#x4E0B;&#x306F;&#x89E3;&#x7B54;&#x4F8B;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p><pre><code>// &#x7DF4;&#x7FD2;&#x554F;&#x984C;&#x306E;&#x89E3;&#x7B54;&#x4F8B;
+/*
+for(i = 0; i &lt; 10; i++) {
+  line = &apos;&apos;;
+  for(j = 0; j &lt; 10; j++) {
+    var plot = &apos;#&apos;;
+    if(i === j || 9-i === j) {
+      plot = &apos;*&apos;;
+    }
+    line+=plot;
+  }
+  console.log(line);
+}
+*/</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a target="_self" href="lesson12.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 12 : Object中心に...">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a target="_self" href="lesson14.html" class="navigation navigation-next " aria-label="Next page: Lesson 14 : 体験編 HTML + JavaScript">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lesson 13 : 応用編 ループと配列","level":"1.15","depth":1,"next":{"title":"Lesson 14 : 体験編 HTML + JavaScript","level":"1.16","depth":1,"path":"basic/lesson14.md","ref":"basic/lesson14.md","articles":[]},"previous":{"title":"Lesson 12 : Object中心に...","level":"1.14","depth":1,"path":"basic/lesson12.md","ref":"basic/lesson12.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basic/lesson13.md","mtime":"2016-10-12T11:05:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-27T01:30:46.727Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

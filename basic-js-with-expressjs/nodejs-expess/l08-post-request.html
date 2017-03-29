@@ -1,0 +1,618 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Lesson 08 : POST リクエスト · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="l09-routing.html" />
+    
+    
+    <link rel="prev" href="l07-static-file.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a target="_self" href="../index.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    JavaScript基礎
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic/lesson01.html">
+            
+                <a target="_self" href="../basic/lesson01.html">
+            
+                    
+                    Lesson 01 : 出力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../basic/lesson02.html">
+            
+                <a target="_self" href="../basic/lesson02.html">
+            
+                    
+                    Lesson 02 : 計算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../basic/lesson03.html">
+            
+                <a target="_self" href="../basic/lesson03.html">
+            
+                    
+                    Lesson 03 : Boolean(bool型)とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../basic/lesson04.html">
+            
+                <a target="_self" href="../basic/lesson04.html">
+            
+                    
+                    Lesson 04 : 条件分岐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../basic/lesson05.html">
+            
+                <a target="_self" href="../basic/lesson05.html">
+            
+                    
+                    Lesson 05 : 変数とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../basic/lesson06.html">
+            
+                <a target="_self" href="../basic/lesson06.html">
+            
+                    
+                    Lesson 06 : 練習問題 条件分岐と変数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../basic/lesson07.html">
+            
+                <a target="_self" href="../basic/lesson07.html">
+            
+                    
+                    Lesson 07 : 関数とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../basic/lesson08.html">
+            
+                <a target="_self" href="../basic/lesson08.html">
+            
+                    
+                    Lesson 08 : ループ処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../basic/lesson09.html">
+            
+                <a target="_self" href="../basic/lesson09.html">
+            
+                    
+                    Lesson 09 : 配列とループ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../basic/lesson10.html">
+            
+                <a target="_self" href="../basic/lesson10.html">
+            
+                    
+                    Lesson 10 : Object（オブジェクト）で表現の幅を広げる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../basic/lesson11.html">
+            
+                <a target="_self" href="../basic/lesson11.html">
+            
+                    
+                    Lesson 11 : JavaScript国のルール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../basic/lesson12.html">
+            
+                <a target="_self" href="../basic/lesson12.html">
+            
+                    
+                    Lesson 12 : Object中心に...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../basic/lesson13.html">
+            
+                <a target="_self" href="../basic/lesson13.html">
+            
+                    
+                    Lesson 13 : 応用編 ループと配列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../basic/lesson14.html">
+            
+                <a target="_self" href="../basic/lesson14.html">
+            
+                    
+                    Lesson 14 : 体験編 HTML + JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    Node.js / Expressjs
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="l01-about-nodejs.html">
+            
+                <a target="_self" href="l01-about-nodejs.html">
+            
+                    
+                    Lesson 01 : Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="l02-about-npm.html">
+            
+                <a target="_self" href="l02-about-npm.html">
+            
+                    
+                    Lesson 02 : NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="l03-set-up.html">
+            
+                <a target="_self" href="l03-set-up.html">
+            
+                    
+                    Lesson 03 : アプリケーション構築開始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="l04-explain-basic-express.html">
+            
+                <a target="_self" href="l04-explain-basic-express.html">
+            
+                    
+                    Lesson 04 : Express基本解説
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="l05-get-request.html">
+            
+                <a target="_self" href="l05-get-request.html">
+            
+                    
+                    Lesson 05 : GET リクエスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="l06-rendering.html">
+            
+                <a target="_self" href="l06-rendering.html">
+            
+                    
+                    Lesson 06 : レンダリングエンジンpug(jade)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="l07-static-file.html">
+            
+                <a target="_self" href="l07-static-file.html">
+            
+                    
+                    Lesson 07 : 静的ファイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.25" data-path="l08-post-request.html">
+            
+                <a target="_self" href="l08-post-request.html">
+            
+                    
+                    Lesson 08 : POST リクエスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="l09-routing.html">
+            
+                <a target="_self" href="l09-routing.html">
+            
+                    
+                    Lesson 09 : ルーティング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="mini-application.html">
+            
+                <a target="_self" href="mini-application.html">
+            
+                    
+                    Last Lesson : ミニアプリケーション
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a target="_self" href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a target="_self" href=".." >Lesson 08 : POST リクエスト</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lesson-08--post-&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;">Lesson 08 : POST &#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;</h1><p>&#x3053;&#x308C;&#x307E;&#x3067;&#x306E;&#x5185;&#x5BB9;&#x3067;&#x3001;Web&#x30B5;&#x30A4;&#x30C8;&#x306F;&#x4F5C;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;</p><p>Web&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3068;&#x3057;&#x3066;&#x3089;&#x3057;&#x3055;&#x3092;&#x3060;&#x3059;&#x306B;&#x306F;&#x3001;&#x4F55;&#x304C;&#x8DB3;&#x308A;&#x306A;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p><p>&#x666E;&#x6BB5;web&#x30B5;&#x30A4;&#x30C8;&#x3078;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x30D0;&#x30FC;&#x3078;URL&#x3092;&#x5165;&#x529B;&#x3057;&#x8A2A;&#x554F;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x3001;HTTP GET&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;&#x5B9F;&#x73FE;&#x3067;&#x304D;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3067;&#x3042;&#x308B;&#x6211;&#x3005;&#x304C;&#x3001;<code>&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x3092;&#x5F97;&#x308B;</code>&#x52D5;&#x4F5C;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x3067;&#x306F;&#x3001;&#x305D;&#x306E;&#x9006;&#x306F;&#x51FA;&#x6765;&#x306A;&#x3044;&#x306E;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3001;&#x305D;&#x3057;&#x3066;&#x3069;&#x3093;&#x306A;&#x3082;&#x306E;&#x304C;&#x8003;&#x3048;&#x3089;&#x308C;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;</p><p>&#x4E00;&#x822C;&#x7684;&#x306A;&#x3082;&#x306E;&#x3067;&#x3044;&#x3046;&#x3068;&#x3001;&#x304A;&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x304C;&#x601D;&#x3044;&#x3064;&#x304D;&#x307E;&#x3059;&#x306D;&#x3002;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x304C;<code>&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x3092;&#x9001;&#x308B;</code>&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x306E;&#x304C;&#x3001;POST&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x307E;&#x305A;&#x306F;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x7528;&#x610F;&#x3057;&#x3066;&#x52D5;&#x4F5C;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p><p><code>body-parser</code>&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;(<a target="_self" href="http://expressjs.com/en/4x/api.html#req.body" target="_blank">&#x516C;&#x5F0F;&#x53C2;&#x7167;</a>)</p><pre><code>$ npm install --save body-parser</code></pre>
+<p><code>index.js</code>&#x3092;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x5909;&#x66F4;&#x3002;</p><pre><code>var express = require(&apos;express&apos;);
+var app = express();
+
+var bodyParser = require(&apos;body-parser&apos;);
+app.use(bodyParser.json());
+
+app.use(&apos;/assets&apos;, express.static(__dirname + &apos;/public&apos;));
+
+app.set(&apos;views&apos;, &apos;./views&apos;);
+app.set(&apos;view engine&apos;, &apos;pug&apos;);
+
+app.get(&apos;/&apos;, function(req, res) {
+  res.render(&apos;index&apos;);
+});
+
+app.post(&apos;/&apos;, function(req, res) {
+  var userName = req.body.userInput;
+  res.send(&apos;Hello!&apos; + userName + &apos;!&apos;);
+});
+
+app.listen(3000, function() {
+  console.log(&apos;Starting your application server at http://localhost:3000&apos;);
+});</code></pre>
+<p><code>views/index.pug</code>&#x3092;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;</p><pre><code>doctype html
+html
+  head
+    title index sample
+    script(src=&quot;assets/main.js&quot;)
+  body
+    p Hello visitor!
+    p Could you tell me your name?
+    input#userInput(type=&quot;text&quot; placeholder=&quot;your name&quot;)
+    Button#userSend Tell them
+    div#responseServer</code></pre>
+<p><code>public/main.js</code>&#x3092;&#x6A19;&#x6E96;Web API&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30D5;&#x30A7;&#x30FC;&#x30B9;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x66F8;&#x3044;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p><p>DOM&#x3092;&#x53D6;&#x5F97;&#x30FB;&#x64CD;&#x4F5C;&#x3059;&#x308B;<a target="_self" href="https://developer.mozilla.org/ja/docs/Web/API/Document" target="_blank">Document</a></p><p>&#x30C7;&#x30FC;&#x30BF;&#x901A;&#x4FE1;&#x306B;&#x4F7F;&#x308F;&#x308C;&#x308B;<a target="_self" href="https://developer.mozilla.org/ja/docs/Web/API/XMLHttpRequest" target="_blank">XMLHttpRequest</a></p><pre><code>window.onload = function() {
+  document.getElementById(&apos;userSend&apos;).addEventListener(&apos;click&apos;, function () {
+    var userInput = document.getElementById(&apos;userInput&apos;).value;
+    var req = new XMLHttpRequest();
+    req.open(&apos;POST&apos;, &apos;/&apos;, true);
+    req.setRequestHeader(&apos;Content-Type&apos;, &apos;application/json&apos;);
+    req.send(JSON.stringify({ userInput: userInput }));
+    req.onreadystatechange = function () {
+      if (req.readyState === 4 &amp;&amp; req.status === 200) {
+        document.getElementById(&apos;responseServer&apos;).textContent = req.responseText;
+      }
+    };
+  });
+};</code></pre>
+<p>&#x6E96;&#x5099;&#x304C;&#x3067;&#x304D;&#x305F;&#x3089;&#x3001;<code>node index.js</code>&#x3067;&#x8D77;&#x52D5;&#x3057;&#x3001;&#x52D5;&#x4F5C;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p><p>&#x3053;&#x308C;&#x307E;&#x3067;&#x306F;&#x3001;<code>app.get()</code>&#x306E;&#x307F;&#x3067;&#x3057;&#x305F;&#x304C;&#x3001;<code>app.post()</code>&#x3092;&#x8A2D;&#x7F6E;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;HTTP GET&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;HTTP POST&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x53D7;&#x3051;&#x4ED8;&#x3051;&#x308B;&#x305F;&#x3081;&#x306E;&#x8A2D;&#x5B9A;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;POST&#x3067;&#x9001;&#x4FE1;&#x3055;&#x308C;&#x3066;&#x304D;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3068;<code>Hello!</code>&#x3092;&#x7D50;&#x5408;&#x3057;&#x3066;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p><p>&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x5074;&#xFF08;&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x5074;&#xFF09;&#x3067;&#x306F;&#x3001;&#x305D;&#x306E;&#x6587;&#x5B57;&#x5217;&#x3092;&#x9001;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x304A;&#x308A;&#x3001;&#x8FD4;&#x3063;&#x3066;&#x304D;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;<code>&lt;div id=&quot;responseServer&quot;&gt;&lt;/div&gt;</code>&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x307E;&#x3059;&#x3002;</p><p>HTTP POST&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x304B;&#x3089;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x5074;&#x3078;<code>&#x4EFB;&#x610F;&#x306E;&#x60C5;&#x5831;</code>&#x3092;&#x9001;&#x4FE1;&#x3057;&#x3001;&#x305D;&#x306E;&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;&#x3092;&#x53D7;&#x53D6;&#x308B;&#x4E8B;&#x304C;&#x53EF;&#x80FD;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;(&#x6C17;&#x304C;&#x3064;&#x3044;&#x305F;&#x65B9;&#x3082;&#x3044;&#x3089;&#x3063;&#x3057;&#x3083;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;HTTP GET&#x3067;&#x3082;&#x51FA;&#x6765;&#x306A;&#x3044;&#x3053;&#x3068;&#x306F;&#x306A;&#x3044;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;&#x3001;GET&#x3067;&#x306F;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3057;&#x305F;URL&#x306B;&#x60C5;&#x5831;&#x304C;&#x4ED8;&#x52A0;&#x3055;&#x308C;&#x308B;&#x305F;&#x3081;&#x3001;&#x91CD;&#x8981;&#x306A;&#x60C5;&#x5831;&#x3092;&#x9001;&#x308B;&#x5834;&#x5408;&#x3001;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x3068;&#x3044;&#x3046;&#x89B3;&#x70B9;&#x3067;&#x306F;&#x4F7F;&#x3046;&#x3079;&#x304D;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;)</p><h2 id="content-type&#x3068;&#x306F;">Content-Type&#x3068;&#x306F;</h2><p>POST&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3067;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x9001;&#x308B;&#x969B;&#x3001;&#x305D;&#x308C;&#x304C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x306A;&#x306E;&#x304B;&#x3092;&#x793A;&#x3059;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p><p>&#x305D;&#x3053;&#x3067;&#x91CD;&#x8981;&#x306B;&#x306A;&#x3063;&#x3066;&#x304F;&#x308B;&#x306E;&#x304C;&#x3001;Content-Type&#x3067;&#x3059;&#x3002;</p><p>&#x30D5;&#x30ED;&#x30F3;&#x30C8;&#x5074;&#x3067;&#x306F;&#x3001;<code>application/json</code>&#x3001;&#x3088;&#x3046;&#x3059;&#x308B;&#x306B;<code>JSON</code>&#x3092;&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x3057;&#x3066;&#x9001;&#x308D;&#x3046;&#x3068;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p><p>&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x5074;&#x3067;&#x306F;&#x3001;POST&#x3067;&#x9001;&#x3089;&#x308C;&#x3066;&#x304F;&#x308B;&#x3082;&#x306E;&#x3092;&#x30D1;&#x30FC;&#x30B9;&#x3057;&#x3066;&#x4E0A;&#x3052;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x3001;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;&#x305D;&#x306E;&#x6A5F;&#x80FD;&#x304C;&#x7121;&#x3044;&#x306E;&#x3067;<code>body-parser</code>&#x3067;&#x5225;&#x9014;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3001;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x4E0A;&#x3052;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#xFF08;<code>app.use(bodyParser.json());</code>&#x304C;JSON&#x30C7;&#x30FC;&#x30BF;&#x7528;&#x306E;&#x8A2D;&#x5B9A;&#xFF09;</p><h2 id="&#x7DF4;&#x7FD2;&#x554F;&#x984C;">&#x7DF4;&#x7FD2;&#x554F;&#x984C;</h2><ol><li>&#x30D5;&#x30ED;&#x30F3;&#x30C8;&#x5074;&#x3067;input&#x3092;2&#x3064;&#x7528;&#x610F;&#x3057;&#x3001;&#x305D;&#x306E;&#x639B;&#x3051;&#x7B97;&#x306E;&#x7D50;&#x679C;&#x3092;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x304B;&#x3089;&#x8FD4;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#xFF08;&#x3082;&#x3061;&#x308D;&#x3093;&#x5B9F;&#x969B;&#x306F;&#x3001;&#x56DB;&#x5247;&#x6F14;&#x7B97;&#x306E;&#x3088;&#x3046;&#x306A;&#x51E6;&#x7406;&#x306F;&#x30D5;&#x30ED;&#x30F3;&#x30C8;&#x5074;&#x306E;jacasvript&#x3067;&#x5341;&#x5206;&#x3067;&#x3059;&#xFF09;
+</li></ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a target="_self" href="l07-static-file.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 07 : 静的ファイル">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a target="_self" href="l09-routing.html" class="navigation navigation-next " aria-label="Next page: Lesson 09 : ルーティング">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lesson 08 : POST リクエスト","level":"1.25","depth":1,"next":{"title":"Lesson 09 : ルーティング","level":"1.26","depth":1,"path":"nodejs-expess/l09-routing.md","ref":"nodejs-expess/l09-routing.md","articles":[]},"previous":{"title":"Lesson 07 : 静的ファイル","level":"1.24","depth":1,"path":"nodejs-expess/l07-static-file.md","ref":"nodejs-expess/l07-static-file.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nodejs-expess/l08-post-request.md","mtime":"2016-11-27T00:48:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-27T01:30:46.727Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

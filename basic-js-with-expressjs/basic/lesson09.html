@@ -1,0 +1,634 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Lesson 09 : 配列とループ · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lesson10.html" />
+    
+    
+    <link rel="prev" href="lesson08.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a target="_self" href="../index.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    JavaScript基礎
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="lesson01.html">
+            
+                <a target="_self" href="lesson01.html">
+            
+                    
+                    Lesson 01 : 出力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="lesson02.html">
+            
+                <a target="_self" href="lesson02.html">
+            
+                    
+                    Lesson 02 : 計算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="lesson03.html">
+            
+                <a target="_self" href="lesson03.html">
+            
+                    
+                    Lesson 03 : Boolean(bool型)とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="lesson04.html">
+            
+                <a target="_self" href="lesson04.html">
+            
+                    
+                    Lesson 04 : 条件分岐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="lesson05.html">
+            
+                <a target="_self" href="lesson05.html">
+            
+                    
+                    Lesson 05 : 変数とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="lesson06.html">
+            
+                <a target="_self" href="lesson06.html">
+            
+                    
+                    Lesson 06 : 練習問題 条件分岐と変数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="lesson07.html">
+            
+                <a target="_self" href="lesson07.html">
+            
+                    
+                    Lesson 07 : 関数とは？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="lesson08.html">
+            
+                <a target="_self" href="lesson08.html">
+            
+                    
+                    Lesson 08 : ループ処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="lesson09.html">
+            
+                <a target="_self" href="lesson09.html">
+            
+                    
+                    Lesson 09 : 配列とループ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="lesson10.html">
+            
+                <a target="_self" href="lesson10.html">
+            
+                    
+                    Lesson 10 : Object（オブジェクト）で表現の幅を広げる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="lesson11.html">
+            
+                <a target="_self" href="lesson11.html">
+            
+                    
+                    Lesson 11 : JavaScript国のルール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="lesson12.html">
+            
+                <a target="_self" href="lesson12.html">
+            
+                    
+                    Lesson 12 : Object中心に...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="lesson13.html">
+            
+                <a target="_self" href="lesson13.html">
+            
+                    
+                    Lesson 13 : 応用編 ループと配列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="lesson14.html">
+            
+                <a target="_self" href="lesson14.html">
+            
+                    
+                    Lesson 14 : 体験編 HTML + JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    Node.js / Expressjs
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../nodejs-expess/l01-about-nodejs.html">
+            
+                <a target="_self" href="../nodejs-expess/l01-about-nodejs.html">
+            
+                    
+                    Lesson 01 : Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../nodejs-expess/l02-about-npm.html">
+            
+                <a target="_self" href="../nodejs-expess/l02-about-npm.html">
+            
+                    
+                    Lesson 02 : NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../nodejs-expess/l03-set-up.html">
+            
+                <a target="_self" href="../nodejs-expess/l03-set-up.html">
+            
+                    
+                    Lesson 03 : アプリケーション構築開始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../nodejs-expess/l04-explain-basic-express.html">
+            
+                <a target="_self" href="../nodejs-expess/l04-explain-basic-express.html">
+            
+                    
+                    Lesson 04 : Express基本解説
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../nodejs-expess/l05-get-request.html">
+            
+                <a target="_self" href="../nodejs-expess/l05-get-request.html">
+            
+                    
+                    Lesson 05 : GET リクエスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../nodejs-expess/l06-rendering.html">
+            
+                <a target="_self" href="../nodejs-expess/l06-rendering.html">
+            
+                    
+                    Lesson 06 : レンダリングエンジンpug(jade)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../nodejs-expess/l07-static-file.html">
+            
+                <a target="_self" href="../nodejs-expess/l07-static-file.html">
+            
+                    
+                    Lesson 07 : 静的ファイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../nodejs-expess/l08-post-request.html">
+            
+                <a target="_self" href="../nodejs-expess/l08-post-request.html">
+            
+                    
+                    Lesson 08 : POST リクエスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../nodejs-expess/l09-routing.html">
+            
+                <a target="_self" href="../nodejs-expess/l09-routing.html">
+            
+                    
+                    Lesson 09 : ルーティング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../nodejs-expess/mini-application.html">
+            
+                <a target="_self" href="../nodejs-expess/mini-application.html">
+            
+                    
+                    Last Lesson : ミニアプリケーション
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a target="_self" href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a target="_self" href=".." >Lesson 09 : 配列とループ</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="lesson-09--&#x914D;&#x5217;&#x3068;&#x30EB;&#x30FC;&#x30D7;">Lesson 09 : &#x914D;&#x5217;&#x3068;&#x30EB;&#x30FC;&#x30D7;</h2><p>&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x683C;&#x7D0D;&#x65B9;&#x6CD5;&#x3068;&#x3057;&#x3066;&#x4FBF;&#x5229;&#x306A;&#x3082;&#x306E;&#x306B;&#x3001;&#x914D;&#x5217;&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p><p>&#x3053;&#x308C;&#x307E;&#x3067;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#xFF08;&#x6570;&#x5024;&#x3084;&#x6587;&#x5B57;&#x5217;&#x306A;&#x3069;&#xFF09;&#x3092;&#x683C;&#x7D0D;&#x3059;&#x308B;&#x3068;&#x304D;&#x306F;&#xFF11;&#x3064;&#x305A;&#x3064;&#x5909;&#x6570;&#x306B;&#x683C;&#x7D0D;&#x3057;&#x3066;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;</p><p>&#x3057;&#x304B;&#x3057;&#x3001;&#x6271;&#x3046;&#x30C7;&#x30FC;&#x30BF;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x307E;&#x3068;&#x3081;&#x3066;&#x7BA1;&#x7406;&#x3001;&#x64CD;&#x4F5C;&#x3057;&#x305F;&#x307B;&#x3046;&#x304C;&#x90FD;&#x5408;&#x306E;&#x826F;&#x3044;&#x5834;&#x5408;&#x304C;&#x591A;&#x3005;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p><p>&#x5B66;&#x7D1A;&#x540D;&#x7C3F;&#x3092;&#x8003;&#x3048;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x4ECA;&#x307E;&#x3067;&#x306E;&#x65B9;&#x6CD5;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x69D8;&#x306A;&#x65B9;&#x6CD5;&#x3067;&#x8868;&#x73FE;&#x3057;&#x305F;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;</p><pre><code>var student_name01 = &apos;Masahiro Nakai&apos;;
+var student_name02 = &apos;Goro Inagaki&apos;;
+var student_name03 = &apos;Takuya Kimura&apos;;
+var student_name04 = &apos;Shingo Katori&apos;;
+var student_name05 = &apos;Tsuyoshi Kusanagi&apos;;</code></pre>
+<p>&#x6570;&#x5B57;&#x304C;&#x51FA;&#x5E2D;&#x756A;&#x53F7;&#x3068;&#x3044;&#x3046;&#x611F;&#x3058;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;&#x305D;&#x308C;&#x306B;&#x3057;&#x3066;&#x3082;5&#x4EBA;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x306A;&#x3093;&#x3066;&#x3088;&#x3063;&#x307D;&#x3069;&#x904E;&#x758E;&#x5316;&#x306E;&#x3059;&#x3059;&#x3093;&#x3060;&#x6240;&#x306E;&#x5B66;&#x6821;&#x3067;&#x3059;&#x306D;&#x3002;
+&#x3055;&#x3066;&#x3001;&#x5197;&#x8AC7;&#x306F;&#x3055;&#x3066;&#x304A;&#x304D;&#x3001;&#x4E00;&#x822C;&#x7684;&#x306A;&#x30AF;&#x30E9;&#x30B9;&#x306E;&#x4EBA;&#x6570;&#x3068;&#x3044;&#x3046;&#x3068;30&#x4EBA;&#x3068;&#x304B;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;&#x3053;&#x306E;&#x8ABF;&#x5B50;&#x3067;30&#x4EBA;&#x5206;&#x66F8;&#x304D;&#x7D9A;&#x3051;&#x308B;&#x3063;&#x3066;&#x306E;&#x306F;&#x30B9;&#x30DE;&#x30FC;&#x30C8;&#x3067;&#x306F;&#x306A;&#x3044;&#x3067;&#x3059;&#x306D;&#x3002;
+&#x914D;&#x5217;&#x306E;&#x4ED5;&#x7D44;&#x307F;&#x3092;&#x4F7F;&#x3046;&#x3068;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x51FA;&#x6765;&#x3066;&#x4FBF;&#x5229;&#x3067;&#x3059;&#x3002;</p><pre><code>var students_name = [&apos;Masahiro Nakai&apos;, &apos;Goro Inagaki&apos;, &apos;Takuya Kimura&apos;, &apos;Shingo Katori&apos;, &apos;Tsuyoshi Kusanagi&apos;];
+var students_number = [1, 2, 3, 4, 5];</code></pre>
+<p>javascript&#x306E;&#x914D;&#x5217;&#x3067;&#x306F;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3092;&#x30DF;&#x30C3;&#x30AF;&#x30B9;&#x3057;&#x3066;&#x683C;&#x7D0D;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x51FA;&#x6765;&#x307E;&#x3059;&#x3002;&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x69D8;&#x306A;&#x611F;&#x3058;&#x3067;&#x3059;&#x3002;</p><pre><code>var students_name_and_number = [&apos;Masahiro Nakai&apos;, 1, &apos;Goro Inagaki&apos;, 2, &apos;Takuya Kimura&apos;, 3, &apos;Shingo Katori&apos;, 4, &apos;Tsuyoshi Kusanagi&apos;, 5];</code></pre>
+<p>&#x3053;&#x308C;&#x307E;&#x3067;&#x306B;&#x5B66;&#x3093;&#x3060;&#x5909;&#x6570;&#x306F;&#x3001;&#x81EA;&#x7531;&#x306B;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x304C;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;&#x3082;&#x3061;&#x308D;&#x3093;&#x3001;&#x914D;&#x5217;&#x3082;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p><pre><code>students_number = [3, 2, 5, 4, 1];
+students_number = [1];
+students_number = [&apos;1&#x756A;&apos;, &apos;2&#x756A;&apos;, &apos;3&#x756A;&apos;, &apos;4&#x756A;&apos;, &apos;5&#x756A;&apos;];
+students_number = &apos;1&#x756A;, 2&#x756A;, 3&#x756A;, 4&#x756A;, 5&#x756A;&apos;;// javascript&#x306F;&#x3001;&#x5143;&#x306E;&#x578B;&#x3092;&#x7121;&#x8996;&#x3057;&#x3066;&#x9055;&#x3046;&#x578B;&#x3092;&#x4EE3;&#x5165;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3001;&#x3082;&#x3061;&#x308D;&#x3093;&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;(&#x305F;&#x3060;&#x3057;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x53EF;&#x8AAD;&#x6027;&#x304C;&#x306A;&#x304F;&#x306A;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;)</code></pre>
+<p>&#x3082;&#x3057;&#x3001;&#x51FA;&#x5E2D;&#x756A;&#x53F7;&#x306E;3&#x756A;&#x3068;1&#x756A;&#x3092;&#x5165;&#x308C;&#x66FF;&#x3048;&#x305F;&#x3044;&#x6642;&#x306A;&#x3069;&#x3001;&#x4E00;&#x3064;&#x4E00;&#x3064;&#x306E;&#x8981;&#x7D20;&#x306E;&#x9806;&#x756A;&#x3092;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x305F;&#x3044;&#x6642;&#x3001;&#x6BCE;&#x56DE;&#x76F4;&#x3059;&#x306E;&#x306F;&#x9762;&#x5012;&#x3067;&#x3059;&#x306D;&#x3002;
+&#x5404;&#x8981;&#x7D20;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x3068;&#x304D;&#x306F;&#x3001;&#x914D;&#x5217;&#x540D;[&#x8981;&#x7D20;&#x306E;&#x756A;&#x53F7;]&#x3068;&#x3044;&#x3046;&#x98A8;&#x306B;&#x66F8;&#x304D;&#x307E;&#x3059;&#x3002;&#x304A;&#x6C17;&#x3065;&#x304D;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001;&#x6700;&#x521D;&#x306E;&#x8981;&#x7D20;&#x306F;0&#x756A;&#x76EE;&#x3067;&#x3059;&#x3002;&#xFF08;0&#x756A;&#x76EE;&#x304B;&#x3089;&#x6570;&#x3048;&#x307E;&#x3059;&#xFF09;</p><pre><code>students_number[0] = 1;
+students_number[4] = 3;</code></pre>
+<p>&#x8981;&#x7D20;&#x6570;&#xFF08;&#x914D;&#x5217;&#x306E;&#x9577;&#x3055;&#xFF09;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x5909;&#x6570;.length&#x3067;&#x53D6;&#x5F97;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p><h3 id="&#x7DF4;&#x7FD2;&#x554F;&#x984C;">&#x7DF4;&#x7FD2;&#x554F;&#x984C;</h3><pre><code>var student_name01 = &apos;Masahiro Nakai&apos;;
+var student_name02 = &apos;Goro Inagaki&apos;;
+var student_name03 = &apos;Takuya Kimura&apos;;
+var student_name04 = &apos;Shingo Katori&apos;;
+var student_name05 = &apos;Tsuyoshi Kusanagi&apos;;
+
+var students_name = [&apos;Masahiro Nakai&apos;, &apos;Goro Inagaki&apos;, &apos;Takuya Kimura&apos;, &apos;Shingo Katori&apos;, &apos;Tsuyoshi Kusanagi&apos;];
+var students_number = [1, 2, 3, 4, 5];
+
+var students_name_and_number = [&apos;Masahiro Nakai&apos;, 1, &apos;Goro Inagaki&apos;, 2, &apos;Takuya Kimura&apos;, 3, &apos;Shingo Katori&apos;, 4, &apos;Tsuyoshi Kusanagi&apos;, 5];
+
+students_number = [3, 2, 5, 4, 1];
+students_number[0] = 1;
+students_number[4] = 3;
+console.log(students_number);// &#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;
+console.log(students_number.length);// &#x8981;&#x7D20;&#x6570;&#xFF08;&#x914D;&#x5217;&#x306E;&#x9577;&#x3055;&#xFF09;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x5909;&#x6570;.length&#x3067;&#x53D6;&#x5F97;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
+
+// &#x901A;&#x5E38;&#x3001;&#x914D;&#x5217;&#x306F;&#x7D71;&#x4E00;&#x3055;&#x308C;&#x305F;&#x578B;&#x306E;&#x5024;&#x3067;&#x8868;&#x73FE;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+// &#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x3092;&#x3059;&#x308B;&#x4E0A;&#x3067;&#x3001;&#x610F;&#x5473;&#x306E;&#x3042;&#x308B;&#x6574;&#x3063;&#x305F;&#x5F62;&#x3067;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x3053;&#x3068;&#x306F;&#x4EBA;&#x306B;&#x3082;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x306B;&#x3082;&#x512A;&#x3057;&#x304F;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x69CB;&#x7BC9;&#x3057;&#x3084;&#x3059;&#x304F;&#x3057;&#x307E;&#x3059;&#x3002;
+// &#x610F;&#x5473;&#x306E;&#x3042;&#x308B;&#x5185;&#x5BB9;&#x3092;&#x578B;&#x3084;&#x9806;&#x756A;&#x306B;&#x898F;&#x5247;&#x6027;&#x3092;&#x6301;&#x305F;&#x305B;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x524D;&#x56DE;&#x5B66;&#x3093;&#x3060;&#x30EB;&#x30FC;&#x30D7;&#x3068;&#x914D;&#x5217;&#x306F;&#x5F37;&#x529B;&#x306A;&#x9023;&#x643A;&#x3092;&#x307F;&#x305B;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;
+// &#x305D;&#x306E;&#x69D8;&#x5B50;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
+function callOutStudents() {
+  for(i = 0; i &lt; students_name_and_number.length / 2; i++) {
+    console.log(&apos;&#x51FA;&#x5E2D;&#x756A;&#x53F7;&apos; + students_name_and_number[ i * 2 + 1 ] + &apos;&#x756A;, &apos; + students_name_and_number[ i * 2 ] + &apos;&#x541B;&#xFF01;&apos;);
+    if(i !== 2) {
+      console.log(&apos;&#x306F;&#x3044;&#xFF01;&apos;);
+    }
+    else {
+      console.log(&apos;&#xFF81;&#xFF6E;&#xFF8F;&#xFF83;&#xFF96;&#xFF01;&apos;);
+    }
+  }
+}
+callOutStudents();
+
+// &#x4E0A;&#x8A18;&#x3067;&#x306F;&#x3001;students_name_and_number&#x3092;&#x4F7F;&#x3063;&#x3066;&#x51FA;&#x5E2D;&#x756A;&#x53F7;&#x3068;&#x540D;&#x524D;&#x3092;&#x547C;&#x3093;&#x3067;&#x307F;&#x307E;&#x3057;&#x305F;&#x3002;
+// &#x4EE5;&#x4E0B;&#x3067;&#x3001;students_name&#x3068;students_number&#x4E21;&#x65B9;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x4F59;&#x88D5;&#x304C;&#x3042;&#x308C;&#x3070;&#x3001;&#x51FA;&#x529B;&#x5185;&#x5BB9;&#x3082;&#x81EA;&#x7531;&#x306B;&#x5909;&#x3048;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
+// hint : &#x65B0;&#x3057;&#x3044;&#x95A2;&#x6570;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;2&#x7B87;&#x6240;&#x3092;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x308B;&#x3060;&#x3051;&#x3067;&#x6700;&#x4F4E;&#x9650;&#x306F;&#x5B9F;&#x73FE;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;
+</code></pre>
+<h3 id="&#x89E3;&#x7B54;&#x4F8B;">&#x89E3;&#x7B54;&#x4F8B;</h3><p>&#x203B;&#x4EE5;&#x4E0B;&#x306F;&#x89E3;&#x7B54;&#x4F8B;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p><pre><code>function callOutStudents2() {
+  for(i = 0; i &lt; students_name.length; i++) {
+    console.log(&apos;&#x51FA;&#x5E2D;&#x756A;&#x53F7;&apos; + students_number[ i ] + &apos;&#x756A;, &apos; + students_name[ i ] + &apos;&#x541B;&#xFF01;&apos;);
+    if(i !== 2) {
+      console.log(&apos;&#x306F;&#x3044;&#xFF01;&apos;);
+    }
+    else {
+      console.log(&apos;&#xFF81;&#xFF6E;&#xFF8F;&#xFF83;&#xFF96;&#xFF01;&apos;);
+    }
+  }
+}
+callOutStudents2();</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a target="_self" href="lesson08.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 08 : ループ処理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a target="_self" href="lesson10.html" class="navigation navigation-next " aria-label="Next page: Lesson 10 : Object（オブジェクト）で表現の幅を広げる">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lesson 09 : 配列とループ","level":"1.11","depth":1,"next":{"title":"Lesson 10 : Object（オブジェクト）で表現の幅を広げる","level":"1.12","depth":1,"path":"basic/lesson10.md","ref":"basic/lesson10.md","articles":[]},"previous":{"title":"Lesson 08 : ループ処理","level":"1.10","depth":1,"path":"basic/lesson08.md","ref":"basic/lesson08.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basic/lesson09.md","mtime":"2016-10-12T11:05:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-11-27T01:30:46.727Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
