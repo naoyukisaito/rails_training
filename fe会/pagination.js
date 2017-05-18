@@ -1,3 +1,4 @@
+console.log('git hub desktop test');
 var PAGINATION_MANAGER = {
 
 	init: function() {
@@ -57,7 +58,7 @@ PAGINATION.prototype = {
 			self.controller.setMove($(this).index());
 		});
 	},
-	toPrev: function() { 
+	toPrev: function() {
 		var $active = this.$target.find('.active');
 		this.$prev.addClass('disabled');
 		if ($active.index() === 1) {
